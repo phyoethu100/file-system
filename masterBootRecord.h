@@ -1,16 +1,6 @@
 /**************************************************************************
-* Class:  CSC-415-01 Fall 2020
-* Team Name: A++ 
-* Student Name-ID: Roberto Herman (918009734), Cindy Fung Chan (920832364)
-*                  Phyoe Thu (918656575), Aryanna Brown (920188955)            
-* GitHub UserID: mecosteas, cny257, phyoethu100, aryannayazmin   
-* Project: Group term assignment - Basic File System 
-* 
-* File:  masterBootRecord.h
-*
 * Description: Header for the master boot record structure which will keep
-*              a record of the details of our volume.
-*              
+*              a record of the details of our volume.             
 **************************************************************************/
 #ifndef MASTERBOOTRECORD_H
 #define MASTERBOOTRECORD_H
