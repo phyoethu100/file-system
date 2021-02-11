@@ -1,16 +1,6 @@
 /**************************************************************************
-* Class:  CSC-415-01 Fall 2020
-* Team Name: A++ 
-* Student Name-ID: Roberto Herman (918009734), Cindy Fung Chan (920832364)
-*                  Phyoe Thu (918656575), Aryanna Brown (920188955)            
-* GitHub UserID: mecosteas, cny257, phyoethu100, aryannayazmin   
-* Project: Group term assignment - Basic File System 
-* 
-* File:  b_io.c
-*
 * Description: Functions for reading and writing blocks of data. Open file
-*              table and file control blocks are also defined here.
-*              
+*              table and file control blocks are also defined here.          
 **************************************************************************/
 
 #include <stdio.h>
@@ -321,7 +311,7 @@ int b_write(int fd, char *buffer, int count)
 
             else if (count <= openFileTable[fd].bufPos)
             {
-                printf("Less than 200 \n");
+                // printf("Less than 200 \n");
                 //    openFileTable[fd].fileLBAIndex %= BUFSIZE; // Get the LBA index
                 //    LBAwrite(buffer, 1, openFileTable[fd].fileLBAIndex);                       // LBA write 1 block to the file
                 // LBAread(buffer, 1, openFileTable[fd].fileLBAIndex);
@@ -336,8 +326,8 @@ int b_write(int fd, char *buffer, int count)
 
         else
         { // If the position (with the count) is greater than 512 bytes
-            printf("Greater than 512 bytes \n");
-            printf("Buffer Pos: %d \n", openFileTable[fd].bufPos);
+            // printf("Greater than 512 bytes \n");
+            // printf("Buffer Pos: %d \n", openFileTable[fd].bufPos);
             openFileTable[fd].transferBytes = BUFSIZE - openFileTable[fd].bufPos;
 
             printf("Remaining bytes to transfer: %d \n", openFileTable[fd].transferBytes);                     // Number of bytes left to transfer before reaching 512 bytes
