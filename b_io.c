@@ -284,7 +284,6 @@ int b_write(int fd, char *buffer, int count)
         // while (total_blocks != 0)
         // {
 
-        // If the count is 100, 300, 600, and 1200
         if ((openFileTable[fd].bufPos + count) < BUFSIZE)
         {                                                                            // If the current position with the count is less than 512 bytes
                                                                                      //   printf("Less than 512 bytes \n");
