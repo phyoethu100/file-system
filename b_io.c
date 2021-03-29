@@ -277,10 +277,6 @@ int b_write(int fd, char *buffer, int count)
     {
         printf("Free space for b_write: %d \n", openFileTable[fd].fileLBAIndex);
 
-        //  printf("Before Buffer Position: %d \n", openFileTable[fd].bufPos);
-        //  printf("Before Count: %d \n", count);
-        //  printf("Before BUFSIZE: %d \n", BUFSIZE);
-
         // while (total_blocks != 0)
         // {
 
@@ -295,7 +291,6 @@ int b_write(int fd, char *buffer, int count)
             openFileTable[fd].bufPos += count;                                       // Keep track of current buffer's position
                                                                                      //  printf("Buf Position: %d \n", openFileTable[fd].bufPos);
 
-            // If total block = 1
             if ((count < openFileTable[fd].bufPos) && (openFileTable[fd].bufPos < BUFSIZE))
             {
                 printf("Greater than 200, but less than 512 \n");
